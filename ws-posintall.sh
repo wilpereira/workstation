@@ -13,9 +13,6 @@ sudo apt update
 
 sudo apt install brave-browser -y
 
-## Git
-sudo apt install git -y
-
 ## Vim
 sudo apt-get install vim -y
 
@@ -37,10 +34,6 @@ sudo snap install discord
 ## VSCode
 sudo snap install –classic code
 
-## Install Chromer
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo dpkg -i google-chrome-stable_current_amd64.debsudo dpkg -i google-chrome-stable_current_amd64.deb
-
 ## Install NVM
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 
@@ -53,13 +46,13 @@ rm packages-microsoft-prod.deb
 sudo apt-get update; \
   sudo apt-get install -y apt-transport-https && \
   sudo apt-get update && \
-  sudo apt-get install -y dotnet-sdk-3.0
+  sudo apt-get install -y dotnet-sdk-3.1
 
 ## Runtime
 sudo apt-get update; \
   sudo apt-get install -y apt-transport-https && \
   sudo apt-get update && \
-  sudo apt-get install -y aspnetcore-runtime-3.0
+  sudo apt-get install -y aspnetcore-runtime-3.1
 
 ## AZ Cli
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
@@ -68,6 +61,9 @@ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 sudo add-apt-repository ppa:mattrose/terminator
 sudo apt-get update
 sudo apt install terminator -y
+
+## Oh My Zsh
+sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
 
 
