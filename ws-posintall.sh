@@ -11,16 +11,16 @@ echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=
 
 sudo apt update
 
-sudo apt install brave-browser
+sudo apt install brave-browser -y
 
 ## Git
-sudo apt install git
+sudo apt install git -y
 
 ## Terminator
-sudo apt install terminator
+sudo apt install terminator -y
 
 ## Vim
-sudo apt-get install vim
+sudo apt-get install vim -y
 
 ## Postman 
 sudo snap install postman
@@ -66,3 +66,6 @@ sudo apt-get update; \
 
 ## AZ Cli
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+
+
+echo "Instalação feitaaaaaaaaaa!!!!"
