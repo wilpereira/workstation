@@ -3,7 +3,7 @@
 sudo rm /var/lib/dpkg/lock-frontend; sudo rm /var/cache/apt/archives/lock;
 
 ## Install Brave
-sudo apt install apt-transport-https curl
+sudo apt install apt-transport-https curl -y
 
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 
@@ -62,9 +62,27 @@ sudo add-apt-repository ppa:mattrose/terminator
 sudo apt-get update
 sudo apt install terminator -y
 
+## ZSH
+sudo apt install zsh
+chsh -s $(which zsh)
+
 ## Oh My Zsh
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
+## Docker
+sudo apt-get update
+sudo apt-get install \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io
 
 
 echo "Instalação feitaaaaaaaaaa!!!!"
