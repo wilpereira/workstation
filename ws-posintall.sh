@@ -16,9 +16,6 @@ sudo apt install brave-browser -y
 ## Git
 sudo apt install git -y
 
-## Terminator
-sudo apt install terminator -y
-
 ## Vim
 sudo apt-get install vim -y
 
@@ -66,6 +63,12 @@ sudo apt-get update; \
 
 ## AZ Cli
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+
+## Terminator
+sudo add-apt-repository ppa:mattrose/terminator
+sudo apt-get update
+sudo apt install terminator -y
+
 
 
 echo "Instalação feitaaaaaaaaaa!!!!"
